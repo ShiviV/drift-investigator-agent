@@ -60,4 +60,4 @@ cd src
 python Engine.py
 ```
 
-Data is read from a local CSV. For the full original write-up — Colab/Jupyter setup, database/ODBC ingestion options, and the exploratory-data-analysis notebook — see the [ProjectPro course page](https://www.projectpro.io/data-science-use-cases/telecom-data-analysis-project) this project is sourced from.
+Data is read from a local CSV. For the full original write-up — Colab/Jupyter setup, database/ODBC ingestion options, and the exploratory-data-analysis notebook 
