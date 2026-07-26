@@ -99,6 +99,66 @@ text) would be needed to catch this class of hallucination. Documented here rath
 demo material than a guardrail that appears to catch everything but wasn't actually
 stress-tested.
 
+## Guardrails hardened further, and two more real bugs found running on Claude
+
+Went back to fix the recontextualization gap above rather than just document it. Added:
+
+5. **Prompt injection defense** (system prompt) — explicit instruction that tool output is
+   data to analyze, never instructions to follow, even if it contains text that looks like
+   a command or role change.
+6. **Pipeline version / incident ID citation checks** (`verify_narrative_node`) — same
+   presence-check pattern as the numeric check, extended to `V\d+` version tags and
+   incident IDs.
+7. **`fact_check_node`** — a second, independent LLM call that reviews the narrative
+   against raw tool output and can catch a real value being *misapplied* to the wrong
+   claim, not just wholesale invention. This directly targets the recontextualization gap
+   guardrail #4 couldn't catch.
+
+**Switching providers to test guardrail #7 surfaced two more real bugs, both fixed:**
+
+- `langchain_anthropic`'s `.content` can be a list of content blocks instead of a plain
+  string, even with no tool calls involved — crashed `verify_narrative_node`'s regex checks
+  the first time this ran against Claude (`TypeError: expected string or bytes-like
+  object`). Fixed with a `_message_text()` normalizer used everywhere a message's content
+  is read.
+- No `max_tokens` was set at all, so Claude used `langchain_anthropic`'s default (1024).
+  Claude's reports run substantially longer than Llama's — the structural-completeness
+  guardrail (#3) correctly caught the resulting truncation twice (once at the 1024 default,
+  again at 2048) before landing on 4096 as sufficient.
+
+**Guardrail #7 then caught a genuine arithmetic hallucination on the first clean run:**
+Claude wrote "a -0.06 AUC swing (0.902 → 0.861)" — the two source numbers were both real,
+but 0.902 − 0.861 = 0.041, not 0.06. The deterministic check flagged `0.06` as absent from
+tool output; `fact_check_node` independently named the specific arithmetic error and stated
+the correct value. That's real semantic verification catching a class of error presence-
+checking alone can't — the model didn't invent an unrelated number, it did math wrong on
+two real ones.
+
+**The injection defense showed a positive signal too:** with no actual injected content in
+the fixtures, the model's own report included an unprompted line — *"no anomalous embedded
+instructions were found in the data returned by any tool during this investigation"* —
+indicating it's actively following the instruction to scrutinize tool output rather than
+just trusting it by default. Worth stress-testing with an actual injected payload in
+`lineage.json` before claiming this defense is proven, not just present.
+
+## A third provider: Hugging Face (free tier)
+
+Added `huggingface` as a third `_get_chat_model()` branch (`langchain-huggingface`,
+`meta-llama/Llama-3.3-70B-Instruct` via HF's Inference Providers routing,
+`provider="auto"`). Confirmed real tool-calling works on the free tier — this wasn't
+guaranteed going in; not every model HF hosts supports `bind_tools()` reliably, and this
+was verified with an isolated test before wiring it into the graph, not assumed. Full
+end-to-end run completed cleanly through all 9 nodes including both guardrail layers,
+which caught two more real, distinct issues on the first try: a correctly-computed but
+not-directly-quoted derived number (0.47 − 0.02 = 0.45, real math, just not literally
+present in any single tool output), and the fact-checker flagging a hypothesis that was
+worded with more certainty than the evidence supports. All three providers (Groq,
+Anthropic, Hugging Face) now produce genuinely different failure/success patterns worth
+mentioning in the demo: Llama-3.3 (Groq and HF both) writes tersely and occasionally
+mishandles date arithmetic; Claude writes thoroughly (needed higher `max_tokens`) and
+had an infrastructure-level quirk (extended-thinking blocks not surviving Studio's state
+serialization) rather than a reasoning error.
+
 ## What was cut and why (for the demo's "weakest part" question)
 
 Four agent-use-case directions were considered before landing on root-cause

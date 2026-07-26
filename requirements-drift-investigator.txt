@@ -6,3 +6,5 @@ python-dotenv
 langgraph
 langchain-groq
 langchain-anthropic
+langchain-huggingface
+huggingface_hub

@@ -525,8 +525,10 @@ def resolve_provider(provider):
         return "groq"
     if os.environ.get("ANTHROPIC_API_KEY"):
         return "anthropic"
+    if os.environ.get("HF_TOKEN"):
+        return "huggingface"
     raise RuntimeError(
-        "No LLM API key found. Set GROQ_API_KEY or ANTHROPIC_API_KEY before running."
+        "No LLM API key found. Set GROQ_API_KEY, ANTHROPIC_API_KEY, or HF_TOKEN before running."
     )
 
 

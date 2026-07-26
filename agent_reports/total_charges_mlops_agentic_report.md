@@ -1,21 +1,21 @@
-Alert Summary: 
-The feature "total_charges" has been flagged for drift in model version "v14". The drift was first detected on July 24, 2026, with a significant drop in accuracy and a notable increase in the PSI score, indicating a substantial shift in the distribution of the feature.
+Alert Summary:
+The feature "total_charges" has been flagged for drift in model version "v14". The drift metrics show a significant increase in the PSI (Population Stability Index) value from 0.02 to 0.47 between June 1st and July 31st, indicating a substantial change in the distribution of the feature. The accuracy of the model has also decreased from 0.922 to 0.832 during the same period.
 
-Root Cause Identified: 
-Our hypothesis for the root cause of the drift is the deployment of the new version of the Billing Pipeline (V2) on July 22, 2026. This deployment introduced changes to the billing aggregation logic and added promotional discounts, which may have caused the drift in the "total_charges" feature. However, we cannot confirm this hypothesis without further investigation.
+Root Cause Identified:
+The root cause of the drift is hypothesized to be the deployment of a new pipeline version (V2) on July 22nd, which introduced changes to the billing aggregation logic and added promotional discounts. This change may have altered the distribution of the "total_charges" feature, leading to the observed drift.
 
-Statistical Variance: 
-The PSI score for the "total_charges" feature has increased significantly, from 0.02 on June 1, 2026, to 0.47 on July 31, 2026, exceeding the threshold of 0.1. The accuracy of the model has also dropped, from 0.922 on June 1, 2026, to 0.832 on July 31, 2026. The feature importance of "total_charges" remains high, at 0.39, indicating that this feature is still a key factor in the model's predictions.
+Statistical Variance:
+The PSI value has increased by 0.45 (from 0.02 to 0.47) over the period, indicating a significant change in the distribution of the feature. The accuracy of the model has decreased by 0.09 (from 0.922 to 0.832) during the same period.
 
-Lineage Context: 
-The "total_charges" feature is produced by the Billing Pipeline, which has undergone changes recently. The new version of the pipeline (V2) was deployed on July 22, 2026, and this deployment is our primary suspect for the cause of the drift. However, we need to investigate further to confirm this hypothesis.
+Lineage Context:
+The "total_charges" feature is produced by the Billing Pipeline, which has undergone changes recently. The pipeline version was updated from V1 to V2 on July 22nd, and the new version introduced changes to the billing aggregation logic and added promotional discounts. There is also a known issue with the duplicate billing validation being temporarily disabled.
 
-Recommended Actions: 
-1. Investigate the changes made to the Billing Pipeline (V2) and assess their impact on the "total_charges" feature.
-2. Review the data validation and quality control processes to ensure that the changes to the pipeline did not introduce any data quality issues.
-3. Consider retraining the model with the updated data to adapt to the changes in the "total_charges" feature.
-4. Monitor the performance of the model and the "total_charges" feature closely to detect any further drift or issues.
-5. Collaborate with the Data Engineering Team to resolve the known issue with the duplicate billing validation and to address any other potential problems with the pipeline.
+Recommended Actions:
+1. Investigate the impact of the new pipeline version (V2) on the distribution of the "total_charges" feature.
+2. Review the changes made to the billing aggregation logic and promotional discounts to understand their effect on the feature.
+3. Re-enable the duplicate billing validation to ensure data quality.
+4. Consider retraining the model with the updated data to adapt to the changes in the feature distribution.
+5. Monitor the feature and model performance closely to detect any further drift or issues.
 
 ---
 
