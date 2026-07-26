@@ -56,9 +56,13 @@ signal instead of a liability.
     this replaced an earlier, non-agentic single-shot version)
   - `--audience {exec,mlops,datascientist}` reframes the same analysis
   - writes a markdown report to `agent_reports/`
-- `requirements-drift-investigator.txt` kept separate from the pipeline's own
-  `requirements.txt` so the new tool's lightweight deps don't collide with the
-  pipeline's pinned `deepchecks==0.12.0` stack.
+- `requirements-drift-investigator.txt` kept separate from the pipeline's own deps
+  (renamed to `requirements-churn-model.txt`) so the new tool's lightweight deps
+  don't collide with the pipeline's pinned `deepchecks==0.12.0` stack. The root
+  `requirements.txt` was later repointed to the drift-investigator deps specifically
+  because Streamlit Community Cloud always installs from the root `requirements.txt`
+  regardless of what's configured in its UI -- deploying with the original root file
+  crashed on `ModuleNotFoundError: yaml`, a real deployment bug found and fixed live.
 
 ## Out of scope (cut, and why)
 

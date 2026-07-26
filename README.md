@@ -185,7 +185,7 @@ Here are the steps:
 
 
 # Executing the project via Modular Code
-* Install the dependencies using the command, navigate to the **Telecom Machine Learning Project to Predict Customer Churn** directory where the requirements.txt file exists, and run ***pip install -r requirements.txt*** in the terminal/CMD.
+* Install the dependencies using the command, navigate to the **Telecom Machine Learning Project to Predict Customer Churn** directory where the requirements-churn-model.txt file exists, and run ***pip install -r requirements-churn-model.txt*** in the terminal/CMD. (Renamed from requirements.txt so the root requirements.txt could be reserved for the Drift Investigator agent's lighter dependencies, which is what gets deployed.)
 
 * Navigate to the src folder in the project directory using the cd command 
 * Run the command python Engine.py in Terminal or run the Engine.py file in either VScode or PyCharm.
