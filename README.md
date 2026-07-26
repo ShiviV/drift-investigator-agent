@@ -1,5 +1,3 @@
----
-
 # Drift Investigator Agent
 
 **This is the AI-Native Builder Technical Assessment submission.** Everything below the next horizontal rule is the pre-existing base project (a ProjectPro-sourced telecom churn model) this agent was built on top of — worth being upfront that the churn model itself predates this assessment; the agent is the new work.
@@ -23,14 +21,14 @@ Or the Streamlit UI (`streamlit run streamlit_app.py`), or LangGraph Studio (`la
 
 ## Start here
 
-- [`planning/01-problem-statement.md`](Code+Folder/planning/01-problem-statement.md) — what problem this solves and what's real vs. synthetic
-- [`planning/02-scope.md`](Code+Folder/planning/02-scope.md) — **the finalized scope**: what's the primary deliverable vs. exploratory
-- [`planning/03-architecture.md`](Code+Folder/planning/03-architecture.md) — how the graph is built
-- [`planning/04-trade-offs.md`](Code+Folder/planning/04-trade-offs.md) — real bugs found and fixed live, guardrails added, and their limitations
-- [`planning/agent-system-prompt.md`](Code+Folder/planning/agent-system-prompt.md) — the agent's system prompt and a worked example
-- [`planning/06-future-vision.md`](Code+Folder/planning/06-future-vision.md) — what's aspirational, clearly separated from what shipped
-- [`planning/07-demo-qa.md`](Code+Folder/planning/07-demo-qa.md) — detailed demo Q&A (also as PDF)
-- [`planning/08-demo-script.md`](Code+Folder/planning/08-demo-script.md) — the demo video script
+- [`planning/01-problem-statement.md`](planning/01-problem-statement.md) — what problem this solves and what's real vs. synthetic
+- [`planning/02-scope.md`](planning/02-scope.md) — **the finalized scope**: what's the primary deliverable vs. exploratory
+- [`planning/03-architecture.md`](planning/03-architecture.md) — how the graph is built
+- [`planning/04-trade-offs.md`](planning/04-trade-offs.md) — real bugs found and fixed live, guardrails added, and their limitations
+- [`planning/agent-system-prompt.md`](planning/agent-system-prompt.md) — the agent's system prompt and a worked example
+- [`planning/06-future-vision.md`](planning/06-future-vision.md) — what's aspirational, clearly separated from what shipped
+- [`planning/07-demo-qa.md`](planning/07-demo-qa.md) — detailed demo Q&A (also as PDF)
+- [`planning/08-demo-script.md`](planning/08-demo-script.md) — the demo video script
 
 ## Weakest part (asked directly, per the assessment's demo expectations)
 
@@ -45,7 +43,6 @@ The numeric-fabrication guardrail (see `04-trade-offs.md`) catches the model inv
 ## Business overview
 
 Churn prediction — identifying customers likely to discontinue a subscription service — is a core problem for telecom operators. This project builds a churn prediction model, but its primary emphasis is on monitoring and adapting to changes in the underlying data over time (data drift) rather than a single model's point-in-time accuracy.
-
 
 ## Running the modular code
 
