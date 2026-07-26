@@ -47,7 +47,7 @@ The numeric-fabrication guardrail (see `04-trade-offs.md`) catches the model inv
 
 # Telecom Machine Learning Project to Predict Customer Churn
 
-*Pre-existing base project (ProjectPro-sourced), included for context only — trimmed to the essentials needed to understand and run it.*
+*Pre-existing base project included for context only — trimmed to the essentials needed to understand and run it.*
 
 ## Business overview
 
