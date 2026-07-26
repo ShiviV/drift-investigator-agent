@@ -6,6 +6,7 @@
 
 An agent that investigates model-drift alerts and explains the likely root cause in plain English — instead of a human opening a multi-megabyte Deepchecks HTML report or a raw JSON drift dump. Given a `feature` and `model_version`, it calls its own tools to fetch drift metrics, pipeline lineage, and model metadata, decides for itself what it needs and in what order, then writes a stakeholder report and pauses for human approval before finishing.
 
+## Architecture deck with demo expectations answered
 - [Architecture deck (Google Slides)](https://docs.google.com/presentation/d/1HWLjkKqKDEmroc33d_1Mn__Dqdhhc1B-C0cuvXU-5II/edit?usp=sharing) — technical walkthrough of the agent's logic and structure
 
 ## Primary entry point
