@@ -1,0 +1,15 @@
+- date: "2026-07-15"
+  change: "Marketing launched 'MegaPack 2000' — a new $1000-$2500 recharge denomination, available in all circles"
+  affected_features: [total_rech_amt, total_recharge]
+- date: "2026-06-30"
+  change: "Competitor 'NetOne' launched a loyalty cashback promotion targeting high-ARPU customers"
+  affected_features: [total_rech_amt, offer]
+- date: "2026-05-10"
+  change: "5G tower rollout completed in 3 additional circles"
+  affected_features: [arpu_5g, vol_5g]
+- date: "2026-05-12"
+  change: "Loyalty program overhaul — points-to-cashback conversion changed program-wide, altering how ARPU, data usage, and satisfaction scores interact"
+  affected_features: [arpu, vol_4g, "Satisfaction Score"]
+- date: "2026-04-12"
+  change: "Regional layoffs announced by major employer 'TechCorp', affecting a large customer segment in the eastern circles"
+  affected_features: []

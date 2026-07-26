@@ -1,0 +1,15 @@
+model_version: xgb_churn_v3
+run_id: 1njkwna
+trained_on_dataset_version: telecom_churn_2026Q1
+training_date: "2026-04-02"
+baseline_stats:
+  total_rech_amt:
+    mean: 182.40
+    p95: 410.00
+    max_observed: 520.00
+    note: "Recharge denominations available at training time capped typical top-ups near $500"
+  arpu_5g:
+    mean: 12.10
+    p95: 48.00
+    max_observed: 61.30
+    note: "5G rollout was limited to 2 circles at training time"

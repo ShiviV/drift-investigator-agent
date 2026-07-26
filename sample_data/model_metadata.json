@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "model_version": "v14",
+    "run_id": "run_83472",
+    "status": "Production",
+    "accuracy": 0.922,
+    "auc": 0.951,
+    "feature_importance": {
+      "total_charges": 0.39,
+      "tenure": 0.21,
+      "monthly_charges": 0.18,
+      "support_tickets": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-07-01T00:00:00Z",
+    "model_version": "v14",
+    "run_id": "run_83472",
+    "status": "Production",
+    "accuracy": 0.917,
+    "auc": 0.946,
+    "feature_importance": {
+      "total_charges": 0.39,
+      "tenure": 0.21,
+      "monthly_charges": 0.18,
+      "support_tickets": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-07-24T00:00:00Z",
+    "model_version": "v14",
+    "run_id": "run_83472",
+    "status": "Production",
+    "accuracy": 0.889,
+    "auc": 0.902,
+    "feature_importance": {
+      "total_charges": 0.39,
+      "tenure": 0.21,
+      "monthly_charges": 0.18,
+      "support_tickets": 0.1
+    }
+  },
+  {
+    "timestamp": "2026-07-31T00:00:00Z",
+    "model_version": "v14",
+    "run_id": "run_83472",
+    "status": "Production",
+    "accuracy": 0.832,
+    "auc": 0.861,
+    "feature_importance": {
+      "total_charges": 0.39,
+      "tenure": 0.21,
+      "monthly_charges": 0.18,
+      "support_tickets": 0.1
+    }
+  }
+]

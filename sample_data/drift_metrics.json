@@ -1,0 +1,102 @@
+[
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1848,
+    "psi": 0.02,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-08T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.921,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1862,
+    "psi": 0.03,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-15T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.919,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1871,
+    "psi": 0.05,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-22T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.918,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1880,
+    "psi": 0.07,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-29T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.917,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1889,
+    "psi": 0.08,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-06T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.916,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1894,
+    "psi": 0.09,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-13T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.914,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1908,
+    "psi": 0.11,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-20T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.912,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 1922,
+    "psi": 0.14,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-24T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.889,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 2410,
+    "psi": 0.29,
+    "drift_detected": true
+  },
+  {
+    "timestamp": "2026-07-31T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.832,
+    "feature": "total_charges",
+    "training_mean": 1850,
+    "production_mean": 3145,
+    "psi": 0.47,
+    "drift_detected": true
+  }
+]

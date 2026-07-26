@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "feature": "total_charges",
+    "pipeline": {
+      "name": "Billing Pipeline",
+      "version": "V1",
+      "status": "Active",
+      "deployment_date": "2026-06-01",
+      "owner": "Data Engineering Team"
+    }
+  },
+  {
+    "timestamp": "2026-07-22T10:15:00Z",
+    "feature": "total_charges",
+    "pipeline": {
+      "name": "Billing Pipeline",
+      "version": "V2",
+      "status": "Active",
+      "deployment_date": "2026-07-22",
+      "owner": "Data Engineering Team",
+      "change_summary": "Added promotional discounts and new billing aggregation logic",
+      "known_issue": "Duplicate billing validation temporarily disabled"
+    }
+  },
+  {
+    "timestamp": "2026-07-24T09:30:00Z",
+    "feature": "total_charges",
+    "pipeline": {
+      "name": "Billing Pipeline",
+      "version": "V2",
+      "status": "Under Investigation",
+      "deployment_date": "2026-07-22",
+      "incident_id": 4812
+    }
+  }
+]

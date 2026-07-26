@@ -1,0 +1,45 @@
+job_id: infer_2026q2_holistic
+run_date: "2026-05-20"
+model_version: xgb_churn_v3
+checks:
+  whole_dataset_drift:
+    score: 0.23
+    threshold: 0.2
+    passed: false
+  feature_drift:
+    - feature: arpu
+      type: continuous
+      test: earth_movers_distance
+      score: 0.15
+      threshold: 0.2
+      passed: true
+    - feature: vol_4g
+      type: continuous
+      test: earth_movers_distance
+      score: 0.14
+      threshold: 0.2
+      passed: true
+    - feature: "Satisfaction Score"
+      type: continuous
+      test: earth_movers_distance
+      score: 0.13
+      threshold: 0.2
+      passed: true
+  concept_drift:
+    - feature: total_rech_amt
+      pps_train: 0.45
+      pps_inference: 0.40
+      diff: 0.05
+      threshold: 0.2
+      passed: true
+  label_drift:
+    score: 0.10
+    threshold: 0.4
+    passed: true
+  model_performance:
+    recall: 0.78
+    recall_threshold: 0.80
+    f1: 0.55
+    f1_threshold: 0.5
+    model_retrain: true
+retrain_recommended: true

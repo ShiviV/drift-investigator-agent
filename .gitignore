@@ -1,0 +1,26 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv_agent/
+.venv_studio/
+
+# os
+.DS_Store
+
+# large / not needed for the assessment submission --
+# the raw churn dataset (1.3GB) and generated Deepchecks HTML dumps (23MB) --
+# too large for a git repo and not needed to review the agent work.
+# sample_data/, planning/, and agent_reports/ are NOT excluded -- those are
+# the actual small deliverables.
+data/
+reports/*.html
+
+# local LangGraph Studio dev-server runtime state (pickled checkpointer store)
+.langgraph_api/
+
+# licensed ProjectPro course material -- not authored by us, not needed to
+# review the agent work, safer not to redistribute publicly
+references/

@@ -1,0 +1,45 @@
+job_id: infer_2026q2_clean
+run_date: "2026-04-25"
+model_version: xgb_churn_v3
+checks:
+  whole_dataset_drift:
+    score: 0.06
+    threshold: 0.2
+    passed: true
+  feature_drift:
+    - feature: total_rech_amt
+      type: continuous
+      test: earth_movers_distance
+      score: 0.04
+      threshold: 0.2
+      passed: true
+    - feature: arpu_5g
+      type: continuous
+      test: earth_movers_distance
+      score: 0.09
+      threshold: 0.2
+      passed: true
+    - feature: "offer_No Offer"
+      type: categorical
+      test: chi_squared
+      score: 0.05
+      threshold: 0.2
+      passed: true
+  concept_drift:
+    - feature: total_rech_amt
+      pps_train: 0.45
+      pps_inference: 0.41
+      diff: 0.04
+      threshold: 0.2
+      passed: true
+  label_drift:
+    score: 0.03
+    threshold: 0.4
+    passed: true
+  model_performance:
+    recall: 0.86
+    recall_threshold: 0.80
+    f1: 0.74
+    f1_threshold: 0.5
+    model_retrain: false
+retrain_recommended: false
