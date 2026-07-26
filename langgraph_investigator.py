@@ -724,7 +724,11 @@ def _extract_decimal_numbers(text):
 
 
 def _extract_pipeline_versions(text):
-    return set(re.findall(r"\bV\d+\b", text or "", re.IGNORECASE))
+    # re.IGNORECASE matches "v1" and "V1" alike, but findall() preserves each
+    # match's original case, so the two would still compare unequal in a set
+    # ("v1" != "V1") -- normalize case here so a real version cited with
+    # different capitalization than the source isn't flagged as fabricated.
+    return {v.upper() for v in re.findall(r"\bV\d+\b", text or "", re.IGNORECASE)}
 
 
 def _extract_incident_ids(text):

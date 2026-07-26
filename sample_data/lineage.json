@@ -33,5 +33,27 @@
       "deployment_date": "2026-07-22",
       "incident_id": 4812
     }
+  },
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "feature": "monthly_charges",
+    "pipeline": {
+      "name": "Billing Pipeline",
+      "version": "V1",
+      "status": "Active",
+      "deployment_date": "2026-06-01",
+      "owner": "Data Engineering Team"
+    }
+  },
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "feature": "tenure",
+    "pipeline": {
+      "name": "Customer Profile Pipeline",
+      "version": "V1",
+      "status": "Active",
+      "deployment_date": "2026-06-01",
+      "owner": "Customer Data Team"
+    }
   }
 ]

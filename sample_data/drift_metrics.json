@@ -98,5 +98,205 @@
     "production_mean": 3145,
     "psi": 0.47,
     "drift_detected": true
+  },
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.1,
+    "psi": 0.01,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-08T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.921,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.6,
+    "psi": 0.01,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-15T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.923,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 69.9,
+    "psi": 0.02,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-22T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.8,
+    "psi": 0.02,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-29T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.921,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.3,
+    "psi": 0.01,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-06T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 71.0,
+    "psi": 0.03,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-13T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.920,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.2,
+    "psi": 0.02,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-20T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.921,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.7,
+    "psi": 0.02,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-24T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 70.4,
+    "psi": 0.01,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-31T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.920,
+    "feature": "monthly_charges",
+    "training_mean": 70.4,
+    "production_mean": 71.1,
+    "psi": 0.03,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-01T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.922,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 24.3,
+    "psi": 0.03,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-08T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.921,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 24.6,
+    "psi": 0.04,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-15T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.920,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 25.0,
+    "psi": 0.05,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-22T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.919,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 25.4,
+    "psi": 0.06,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-06-29T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.919,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 25.9,
+    "psi": 0.08,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-06T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.917,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 26.5,
+    "psi": 0.10,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-13T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.915,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 27.2,
+    "psi": 0.13,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-20T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.910,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 28.0,
+    "psi": 0.17,
+    "drift_detected": false
+  },
+  {
+    "timestamp": "2026-07-24T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.904,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 28.7,
+    "psi": 0.22,
+    "drift_detected": true
+  },
+  {
+    "timestamp": "2026-07-31T00:00:00Z",
+    "model_version": "customer_churn_v14",
+    "accuracy": 0.895,
+    "feature": "tenure",
+    "training_mean": 24.1,
+    "production_mean": 29.5,
+    "psi": 0.31,
+    "drift_detected": true
   }
 ]

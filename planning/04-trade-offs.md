@@ -174,3 +174,32 @@ The weakest part of what shipped: `export_drift_summary()`'s per-feature extract
 was written from documented Deepchecks API knowledge but never run against a live
 `SuiteResult` in this environment, so its exact output shape for `TrainTestFeatureDrift`
 /`FeatureLabelCorrelationChange` values should be verified, not assumed correct.
+
+## Two more features added, testing the "no clear cause" path for real
+
+`monthly_charges` (stable, no drift) and `tenure` (drifting, but genuinely unexplained)
+were added to `drift_metrics.json`/`lineage.json` — both already had feature-importance
+entries in `model_metadata.json` but no data of their own. The dropdown/`VALID_FEATURES`
+picks these up automatically since it reads distinct feature values from the fixture
+file directly; no code change was needed for the UI.
+
+`tenure`'s lineage deliberately has a single pipeline version with no changes recorded
+during the drift window — there is no real upstream cause to find. On the first test,
+the agent handled this correctly and honestly: *"The lineage trail for tenure is thin...
+This is a double-edged finding — it rules out a 'bad deploy' narrative... but it also
+means we lack visibility into whether anything changed."* It didn't force a citation.
+
+It also independently caught a real inconsistency in this project's own synthetic data:
+`tenure`'s per-feature accuracy series (in `drift_metrics.json`) and the model-wide
+accuracy series (in `model_metadata.json`) don't fully agree in magnitude, since they
+were authored somewhat independently. The agent flagged this discrepancy itself and
+recommended reconciling it before using either series for a retraining decision —
+unprompted scrutiny of the input data, not just the eventual report.
+
+**A real bug found by this test:** the pipeline-version guardrail flagged `v1` as
+fabricated even though `V1` genuinely exists in the source data — the regex matched
+case-insensitively, but `re.findall()` preserves each match's original casing, so `"v1"
+!= "V1"` in the set comparison that followed. Fixed by normalizing extracted versions to
+uppercase before comparing. The fact-checker also caught a separate, real timeline
+miscalculation the same run (claimed "five weeks," actual gap was 2.5 weeks) — both
+issues found and fixed from a single test run.
