@@ -33,7 +33,7 @@ Or the Streamlit UI (`streamlit run streamlit_app.py`), or LangGraph Studio (`la
 ## Recordings & traces
 
 - **LangGraph Studio architecture walkthrough** — [Loom video](https://www.loom.com/share/4b03ff1bf8504350a6cc320303dc7e12) tracing the compiled graph node by node, paired with a real [LangSmith trace](https://smith.langchain.com/public/6083ec6a-2169-4ad3-aea4-e6e7ac0642d7/r/019f9ebc-29c3-7631-839e-fe2ca144e0ed?start_time=2026-07-26T14%3A02%3A40.279583Z) of a live run.
-- **Streamlit UI running locally** — [Loom video](https://www.loom.com/share/4b03ff1bf8504350a6cc320303dc7e12)
+- **Streamlit UI running locally** — [Loom video](https://www.loom.com/share/c8f58a6a83474828a3697adab5f40483)
 - **Guardrail catch in action** — [Loom video](https://www.loom.com/share/69db2736123b44238b455cb02927c49f) — the agent declining to fabricate a root cause when none exists in the data.
 
 ## Weakest part (asked directly, per the assessment's demo expectations)
