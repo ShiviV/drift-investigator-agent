@@ -29,10 +29,10 @@ Or the Streamlit UI (`streamlit run streamlit_app.py`), or LangGraph Studio (`la
 - [`planning/06-future-vision.md`](planning/06-future-vision.md) — what's aspirational, clearly separated from what shipped
 - [`planning/07-demo-qa.md`](planning/07-demo-qa.md) — detailed demo Q&A (also as PDF)
 - [`planning/08-demo-script.md`](planning/08-demo-script.md) — the demo video script
-
 ## Recordings & traces
 
-- **LangGraph Studio architecture walkthrough** — [Loom video](https://www.loom.com/share/4b03ff1bf8504350a6cc320303dc7e12) tracing the compiled graph node by node, paired with a real [LangSmith trace](https://smith.langchain.com/public/6083ec6a-2169-4ad3-aea4-e6e7ac0642d7/r/019f9ebc-29c3-7631-839e-fe2ca144e0ed?start_time=2026-07-26T14%3A02%3A40.279583Z) of a live run.
+- **Introduction** — [Loom video](https://www.loom.com/share/aa4af2b6b7bf45f2ab27840bbe07d027)
+- **LangGraph Studio architecture walkthrough** — [Loom video](https://www.loom.com/share/380d8a19688143baa645ee98c8b5e810) tracing the compiled graph node by node, paired with a real [LangSmith trace](https://smith.langchain.com/public/6083ec6a-2169-4ad3-aea4-e6e7ac0642d7/r/019f9ebc-29c3-7631-839e-fe2ca144e0ed?start_time=2026-07-26T14%3A02%3A40.279583Z) of a live run.
 - **Streamlit UI running locally** — [Loom video](https://www.loom.com/share/c8f58a6a83474828a3697adab5f40483)
 - **Guardrail catch in action** — [Loom video](https://www.loom.com/share/69db2736123b44238b455cb02927c49f) — the agent declining to fabricate a root cause when none exists in the data.
 
